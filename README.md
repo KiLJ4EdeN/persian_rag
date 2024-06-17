@@ -2,17 +2,23 @@
 
 simple rag application in persian
 
+### 1. Install Requirements
 ```bash
 pip install -qq -U transformers
 pip install -qq -U accelerate
 pip install -qq -U bitsandbytes
 pip install -qq -U langchain
 pip install -qq -U sentence-transformers
+```
+
+### 2. Download the LLM
+```bash
 huggingface-cli login --token <TOK>
 mkdir part-model
 huggingface-cli download PartAI/Dorna-Llama3-8B-Instruct --local-dir part-model --local-dir-use-symlinks False
 ```
 
+### 3. Run the RAG
 ```python
 import json
 import torch
