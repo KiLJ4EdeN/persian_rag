@@ -86,7 +86,7 @@ input_ids = generator_tokenizer.apply_chat_template(
 
 terminators = [
     generator_tokenizer.eos_token_id,
-    generator_tokenizer.convert_tokens_to_ids("")
+    generator_tokenizer.convert_tokens_to_ids("<|eot_id|>")
 ]
 
 outputs = generator_model.generate(
