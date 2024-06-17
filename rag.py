@@ -19,7 +19,7 @@ config.gradient_checkpointing = True
 
 generator_model = AutoModelForCausalLM.from_pretrained(
     "part-model",
-    device_map="cuda",
+    device_map=device,
     trust_remote_code=True,
     quantization_config=quantization_config,
     config=config
