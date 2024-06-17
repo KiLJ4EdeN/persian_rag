@@ -10,6 +10,7 @@ pip install -qq -U langchain
 pip install -qq -U sentence-transformers
 huggingface-cli login --token <TOK>
 mkdir part-model
+huggingface-cli download PartAI/Dorna-Llama3-8B-Instruct --local-dir part-model --local-dir-use-symlinks False
 ```
 
 ```python
